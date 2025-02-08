@@ -14,14 +14,14 @@ struct ContentView: View {
         
         
         VStack(spacing: 0) {
-            
-            Text("You Have Skills!")
+            Text("Awesome!")
                 .font(.largeTitle)
                 .fontWeight(.black)
-                .foregroundStyle(.goldBC)
+                .foregroundStyle(.white)
                 .padding()
-                .background(.maroonBC)
-                .clipShape(RoundedRectangle(cornerRadius: 15))
+                .frame(maxWidth: .infinity)
+                .background(.indigo)
+            
             
             Spacer()
             
@@ -38,6 +38,8 @@ struct ContentView: View {
             
             Spacer()
             
+            
+            
             HStack{
                 Button("Awesome"){
                     stringName = "You Are Awesome!"
@@ -49,14 +51,16 @@ struct ContentView: View {
                 }
             }
             .buttonStyle(.borderedProminent)
-            //            .border(.purple, width: 5)
             .padding()
             
-            
+            Rectangle()
+                .frame(height: 0)
+                .background(.indigo)
         }
-        .background(
-            Gradient(colors: [.skyBlue,.indigo])
-        )
+        
+        
+        
+        
         
     }
 }
